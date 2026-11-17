@@ -3,143 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descargar Simulador de Dinero - Oficial</title>
+    <title>Simulador de Dinero - Descargar APK</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
         body {
-            background-color: #0b0f19;
-            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
-            padding: 20px;
+            align-items: center;
+            min-height: 100vh;
         }
         .store-card {
-            background-color: #151c2c;
-            max-width: 480px;
+            background: #ffffff;
             width: 100%;
+            max-width: 400px;
             border-radius: 16px;
-            padding: 25px;
-            border: 1px solid #263147;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 24px;
+            box-sizing: border-box;
         }
         .app-header {
             display: flex;
             align-items: center;
-            gap: 15px;
             margin-bottom: 20px;
         }
         .app-icon {
-            width: 75px;
-            height: 75px;
-            background: linear-gradient(135deg, #22c55e, #15803d);
-            border-radius: 18px;
+            font-size: 48px;
+            background: #eef2f7;
+            border-radius: 12px;
+            width: 64px;
+            height: 64px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 38px;
-            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+            margin-right: 16px;
         }
         .app-info h1 {
-            font-size: 1.4rem;
-            margin-bottom: 4px;
+            font-size: 20px;
+            margin: 0 0 4px 0;
+            color: #111;
         }
         .app-dev {
-            color: #38bdf8;
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-size: 14px;
+            color: #666;
         }
         .app-meta {
             display: flex;
-            justify-content: space-around;
-            background-color: #0f1522;
-            padding: 12px;
-            border-radius: 10px;
+            justify-content: space-between;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
             margin-bottom: 20px;
-            font-size: 0.85rem;
-            color: #94a3b8;
+            font-size: 13px;
+            color: #555;
             text-align: center;
+        }
+        .app-meta div {
+            flex: 1;
         }
         .app-meta strong {
             display: block;
-            color: #ffffff;
-            font-size: 1rem;
+            color: #111;
+            font-size: 14px;
         }
         .btn-download {
             display: block;
             width: 100%;
-            background-color: #22c55e;
-            color: #052e16;
+            background-color: #00c853;
+            color: white;
             text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            padding: 15px;
+            padding: 14px 0;
             border-radius: 10px;
-            transition: background 0.2s, transform 0.1s;
-            margin-bottom: 20px;
-        }
-        .btn-download:hover {
-            background-color: #16a34a;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 200, 83, 0.3);
+            box-sizing: border-box;
+            transition: background 0.2s;
         }
         .btn-download:active {
-            transform: scale(0.98);
+            background-color: #00b047;
         }
         .section-title {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: #e2e8f0;
+            font-size: 16px;
+            margin: 24px 0 8px 0;
+            color: #111;
         }
         .description {
-            font-size: 0.92rem;
-            color: #94a3b8;
+            font-size: 14px;
+            color: #555;
             line-height: 1.5;
-            margin-bottom: 20px;
+            margin: 0;
         }
         .warning-box {
-            background-color: rgba(234, 179, 8, 0.1);
-            border-left: 4px solid #eab308;
-            padding: 12px;
-            font-size: 0.82rem;
-            color: #fef08a;
+            background: #fff8e1;
+            border-left: 4px solid #ffb300;
+            padding: 10px 12px;
             border-radius: 4px;
+            font-size: 12px;
+            color: #795548;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <div class="store-card">
-        <div class="app-header">
-            <div class="app-icon">💸</div>
-            <div class="app-info">
-                <h1>Simulador de Dinero</h1>
-                <div class="app-dev">Servios Studio • Oficial</div>
-            </div>
-        </div>
-
-        <div class="app-meta">
-            <div><strong>v1.0</strong>Versión</div>
-            <div><strong>~4 MB</strong>Tamaño</div>
-            <div><strong>Android</strong>Plataforma</div>
-        </div>
-
-        <!-- Cambia el enlace de abajo por el link real donde subas tu APK -->
-        <a href="dinero.apk" download class="btn-download">⬇️ Descargar APK</a>
-
-        <h2 class="section-title">Acerca de este juego</h2>
-        <p class="description">
-            Arranca con una fortuna de $2,000,000,000 y gástala comprando todo lo que quieras: desde hamburguesas hasta autos deportivos de lujo. ¡Más productos llegarán en próximas actualizaciones!
-        </p>
-
-        <div class="warning-box">
-            <strong>Nota de instalación:</strong> Como es un juego independiente fuera de Play Store, Android te pedirá permiso para instalar apps de fuentes desconocidas. ¡Es 100% seguro!
+<div class="store-card">
+    <div class="app-header">
+        <div class="app-icon">💸</div>
+        <div class="app-info">
+            <h1>Simulador de Dinero</h1>
+            <div class="app-dev">Servios Studio • Oficial</div>
         </div>
     </div>
 
+    <div class="app-meta">
+        <div><strong>v1.0</strong>Versión</div>
+        <div><strong>~4 MB</strong>Tamaño</div>
+        <div><strong>Android</strong>Plataforma</div>
+    </div>
+
+    <a href="dinero.apk" download="dinero.apk" class="btn-download">Descargar APK</a>
+
+    <h2 class="section-title">Acerca de este juego</h2>
+    <p class="description">
+        Arranca con una fortuna de $2,000,000,000 y gasta todo lo que puedas en este simulador hecho en Sketchware Pro.
+    </p>
+
+    <div class="warning-box">
+        <strong>Nota de instalación:</strong> Como es un archivo APK externo, tu celular te pedirá permiso para instalar aplicaciones de fuentes desconocidas. ¡Es totalmente seguro!
+    </div>
+</div>
+
 </body>
 </html>
-
