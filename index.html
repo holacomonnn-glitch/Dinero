@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Dinero - Descargar APK</title>
+    <title>Servios Studio - Catálogo de Aplicaciones</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f5f7;
+            color: #333;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            padding: 20px;
         }
-        .store-card {
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        header h1 {
+            font-size: 1.8rem;
+            color: #111;
+        }
+        header p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        .card {
             background: #ffffff;
-            width: 100%;
-            max-width: 400px;
             border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 420px;
             padding: 24px;
-            box-sizing: border-box;
+            margin-bottom: 20px;
         }
         .app-header {
             display: flex;
@@ -31,112 +48,218 @@
             margin-bottom: 20px;
         }
         .app-icon {
-            font-size: 48px;
-            background: #eef2f7;
-            border-radius: 12px;
             width: 64px;
             height: 64px;
+            border-radius: 14px;
+            background: #eef2f5;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.8rem;
             margin-right: 16px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
         }
-        .app-info h1 {
-            font-size: 20px;
-            margin: 0 0 4px 0;
-            color: #111;
+        .app-info h2 {
+            font-size: 1.2rem;
+            color: #1a1a1a;
         }
-        .app-dev {
-            font-size: 14px;
-            color: #666;
+        .app-info p {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 2px;
         }
-        .app-meta {
+        .specs {
             display: flex;
-            justify-content: space-between;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
+            justify-content: space-around;
+            border-top: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
             padding: 12px 0;
             margin-bottom: 20px;
-            font-size: 13px;
-            color: #555;
             text-align: center;
         }
-        .app-meta div {
-            flex: 1;
-        }
-        .app-meta strong {
+        .spec-item span:first-child {
             display: block;
+            font-weight: bold;
+            font-size: 0.95rem;
             color: #111;
-            font-size: 14px;
+        }
+        .spec-item span:last-child {
+            font-size: 0.75rem;
+            color: #888;
+            text-transform: uppercase;
         }
         .btn-download {
             display: block;
             width: 100%;
-            background-color: #00c853;
+            padding: 14px;
+            background-color: #10b981;
             color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
             text-align: center;
-            padding: 14px 0;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: bold;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0, 200, 83, 0.3);
-            box-sizing: border-box;
             transition: background 0.2s;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
         }
-        .btn-download:active {
-            background-color: #00b047;
+        .btn-download:hover {
+            background-color: #059669;
         }
-        .section-title {
-            font-size: 16px;
-            margin: 24px 0 8px 0;
-            color: #111;
+        .btn-nuke {
+            background-color: #ef4444;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
+        .btn-nuke:hover {
+            background-color: #dc2626;
         }
         .description {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.5;
-            margin: 0;
+            margin-top: 16px;
         }
-        .warning-box {
-            background: #fff8e1;
-            border-left: 4px solid #ffb300;
-            padding: 10px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            color: #795548;
-            margin-top: 20px;
+        .description h3 {
+            font-size: 0.95rem;
+            color: #111;
+            margin-bottom: 6px;
+        }
+        .description p {
+            font-size: 0.85rem;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+        .note {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 12px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #92400e;
+        }
+        .interactive-section {
+            margin-top: 15px;
+            border-top: 1px dashed #e5e7eb;
+            padding-top: 15px;
+        }
+        .interactive-section input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            outline: none;
+        }
+        .interactive-section input:focus {
+            border-color: #ef4444;
+        }
+        #toast {
+            margin-top: 10px;
+            padding: 10px;
+            background: #1f2937;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            display: none;
         }
     </style>
 </head>
 <body>
 
-<div class="store-card">
-    <div class="app-header">
-        <div class="app-icon">💸</div>
-        <div class="app-info">
-            <h1>Simulador de Dinero</h1>
-            <div class="app-dev">Servios Studio • Oficial</div>
+    <header>
+        <h1>Servios Studio</h1>
+        <p>Aplicaciones oficiales creadas en Sketchware Pro</p>
+    </header>
+
+    <!-- Tarjeta 1: Simulador de Dinero -->
+    <div class="card">
+        <div class="app-header">
+            <div class="app-icon">💵</div>
+            <div class="app-info">
+                <h2>Simulador de Dinero</h2>
+                <p>Servios Studio • Oficial</p>
+            </div>
+        </div>
+        <div class="specs">
+            <div class="spec-item">
+                <span>v1.0</span>
+                <span>Versión</span>
+            </div>
+            <div class="spec-item">
+                <span>~4 MB</span>
+                <span>Tamaño</span>
+            </div>
+            <div class="spec-item">
+                <span>Android</span>
+                <span>Plataforma</span>
+            </div>
+        </div>
+        <a href="dinero.apk" download class="btn-download">Descargar APK</a>
+        <div class="description">
+            <h3>Acerca de este juego</h3>
+            <p>Arranca con una fortuna de $2,000,000,000 y gasta todo lo que puedas en este simulador hecho en Sketchware Pro.</p>
+        </div>
+        <div class="note">
+            <strong>Nota de instalación:</strong> Como es un archivo APK externo, tu celular te pedirá permiso para instalar aplicaciones de fuentes desconocidas. ¡Es totalmente seguro!
         </div>
     </div>
 
-    <div class="app-meta">
-        <div><strong>v1.0</strong>Versión</div>
-        <div><strong>~4 MB</strong>Tamaño</div>
-        <div><strong>Android</strong>Plataforma</div>
+    <!-- Tarjeta 2: Nuke Launcher -->
+    <div class="card">
+        <div class="app-header">
+            <div class="app-icon">☢️</div>
+            <div class="app-info">
+                <h2>Nuke Launcher</h2>
+                <p>Servios Studio • Oficial</p>
+            </div>
+        </div>
+        <div class="specs">
+            <div class="spec-item">
+                <span>v1.0</span>
+                <span>Versión</span>
+            </div>
+            <div class="spec-item">
+                <span>~3 MB</span>
+                <span>Tamaño</span>
+            </div>
+            <div class="spec-item">
+                <span>Android</span>
+                <span>Plataforma</span>
+            </div>
+        </div>
+        
+        <!-- Simulador interactivo en web -->
+        <div class="interactive-section">
+            <input type="number" id="cantidad" placeholder="Cantidad de warheads (Ej: 5)">
+            <input type="text" id="destino" placeholder="Destino del objetivo (Ej: Nueva York)">
+            <button class="btn-download btn-nuke" onclick="lanzarMisiles()">Lanzar Ataque</button>
+            <div id="toast"></div>
+        </div>
+
+        <div class="description" style="margin-top: 15px;">
+            <h3>Acerca de esta app</h3>
+            <p>Sistema táctico de lanzamiento múltiple desarrollado con flujos de Intents y variables en Sketchware Pro.</p>
+        </div>
     </div>
 
-    <a href="dinero.apk" download="dinero.apk" class="btn-download">Descargar APK</a>
+    <script>
+        function lanzarMisiles() {
+            const cantidad = document.getElementById('cantidad').value;
+            const destino = document.getElementById('destino').value;
+            const toast = document.getElementById('toast');
 
-    <h2 class="section-title">Acerca de este juego</h2>
-    <p class="description">
-        Arranca con una fortuna de $2,000,000,000 y gasta todo lo que puedas en este simulador hecho en Sketchware Pro.
-    </p>
+            if (!cantidad || !destino) {
+                toast.style.display = "block";
+                toast.style.background = "#d97706";
+                toast.innerText = "¡Alerta! Rellena todos los campos tácticos.";
+                return;
+            }
 
-    <div class="warning-box">
-        <strong>Nota de instalación:</strong> Como es un archivo APK externo, tu celular te pedirá permiso para instalar aplicaciones de fuentes desconocidas. ¡Es totalmente seguro!
-    </div>
-</div>
-
+            toast.style.display = "block";
+            toast.style.background = "#ef4444";
+            toast.innerText = `¡Lanzamiento confirmado: ${cantidad} bombas han sido lanzadas a ${destino}!`;
+        }
+    </script>
 </body>
-</html>
+    </html>
+    
