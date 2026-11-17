@@ -103,16 +103,10 @@
             text-decoration: none;
             transition: background 0.2s;
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            margin-bottom: 10px;
         }
         .btn-download:hover {
             background-color: #059669;
-        }
-        .btn-nuke {
-            background-color: #ef4444;
-            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
-        }
-        .btn-nuke:hover {
-            background-color: #dc2626;
         }
         .description {
             margin-top: 16px;
@@ -135,32 +129,6 @@
             margin-top: 15px;
             font-size: 0.8rem;
             color: #92400e;
-        }
-        .interactive-section {
-            margin-top: 15px;
-            border-top: 1px dashed #e5e7eb;
-            padding-top: 15px;
-        }
-        .interactive-section input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 8px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            outline: none;
-        }
-        .interactive-section input:focus {
-            border-color: #ef4444;
-        }
-        #toast {
-            margin-top: 10px;
-            padding: 10px;
-            background: #1f2937;
-            color: #fff;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            display: none;
         }
     </style>
 </head>
@@ -228,38 +196,18 @@
             </div>
         </div>
         
-        <!-- Simulador interactivo en web -->
-        <div class="interactive-section">
-            <input type="number" id="cantidad" placeholder="Cantidad de warheads (Ej: 5)">
-            <input type="text" id="destino" placeholder="Destino del objetivo (Ej: Nueva York)">
-            <button class="btn-download btn-nuke" onclick="lanzarMisiles()">Lanzar Ataque</button>
-            <div id="toast"></div>
-        </div>
+        <!-- Botón de descarga para el APK del Nuke Launcher -->
+        <a href="nuke.apk" download class="btn-download">Descargar APK</a>
 
-        <div class="description" style="margin-top: 15px;">
-            <h3>Acerca de esta app</h3>
+        <div class="description">
+            <h3>Acerca de este juego</h3>
             <p>Sistema táctico de lanzamiento múltiple desarrollado con flujos de Intents y variables en Sketchware Pro.</p>
+        </div>
+        <div class="note">
+            <strong>Nota de instalación:</strong> Archivo APK firmado para dispositivos Android. Permite fuentes desconocidas para instalar.
         </div>
     </div>
 
-    <script>
-        function lanzarMisiles() {
-            const cantidad = document.getElementById('cantidad').value;
-            const destino = document.getElementById('destino').value;
-            const toast = document.getElementById('toast');
-
-            if (!cantidad || !destino) {
-                toast.style.display = "block";
-                toast.style.background = "#d97706";
-                toast.innerText = "¡Alerta! Rellena todos los campos tácticos.";
-                return;
-            }
-
-            toast.style.display = "block";
-            toast.style.background = "#ef4444";
-            toast.innerText = `¡Lanzamiento confirmado: ${cantidad} bombas han sido lanzadas a ${destino}!`;
-        }
-    </script>
 </body>
     </html>
     
