@@ -108,6 +108,18 @@
         .btn-download:hover {
             background-color: #059669;
         }
+        .btn-nuke { background-color: #ef4444; box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3); }
+        .btn-nuke:hover { background-color: #dc2626; }
+        
+        .btn-robux { background-color: #f59e0b; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); }
+        .btn-robux:hover { background-color: #d97706; }
+
+        .btn-delta { background-color: #8b5cf6; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); }
+        .btn-delta:hover { background-color: #7c3aed; }
+
+        .btn-virus { background-color: #dc2626; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3); }
+        .btn-virus:hover { background-color: #b91c1c; }
+
         .description {
             margin-top: 16px;
         }
@@ -136,10 +148,10 @@
 
     <header>
         <h1>Servios Studio</h1>
-        <p>Aplicaciones oficiales creadas en Sketchware Pro</p>
+        <p>Tienda oficial de aplicaciones y herramientas Android</p>
     </header>
 
-    <!-- Tarjeta 1: Simulador de Dinero -->
+    <!-- 1. Simulador de Dinero -->
     <div class="card">
         <div class="app-header">
             <div class="app-icon">💵</div>
@@ -149,30 +161,18 @@
             </div>
         </div>
         <div class="specs">
-            <div class="spec-item">
-                <span>v1.0</span>
-                <span>Versión</span>
-            </div>
-            <div class="spec-item">
-                <span>~4 MB</span>
-                <span>Tamaño</span>
-            </div>
-            <div class="spec-item">
-                <span>Android</span>
-                <span>Plataforma</span>
-            </div>
+            <div class="spec-item"><span>v1.0</span><span>Versión</span></div>
+            <div class="spec-item"><span>~4 MB</span><span>Tamaño</span></div>
+            <div class="spec-item"><span>Android</span><span>Plataforma</span></div>
         </div>
         <a href="dinero.apk" download class="btn-download">Descargar APK</a>
         <div class="description">
             <h3>Acerca de este juego</h3>
             <p>Arranca con una fortuna de $2,000,000,000 y gasta todo lo que puedas en este simulador hecho en Sketchware Pro.</p>
         </div>
-        <div class="note">
-            <strong>Nota de instalación:</strong> Como es un archivo APK externo, tu celular te pedirá permiso para instalar aplicaciones de fuentes desconocidas. ¡Es totalmente seguro!
-        </div>
     </div>
 
-    <!-- Tarjeta 2: Nuke Launcher -->
+    <!-- 2. Nuke Launcher -->
     <div class="card">
         <div class="app-header">
             <div class="app-icon">☢️</div>
@@ -182,32 +182,83 @@
             </div>
         </div>
         <div class="specs">
-            <div class="spec-item">
-                <span>v1.0</span>
-                <span>Versión</span>
-            </div>
-            <div class="spec-item">
-                <span>~3 MB</span>
-                <span>Tamaño</span>
-            </div>
-            <div class="spec-item">
-                <span>Android</span>
-                <span>Plataforma</span>
-            </div>
+            <div class="spec-item"><span>v1.0</span><span>Versión</span></div>
+            <div class="spec-item"><span>~3 MB</span><span>Tamaño</span></div>
+            <div class="spec-item"><span>Android</span><span>Plataforma</span></div>
         </div>
-        
-        <!-- Botón de descarga para el APK del Nuke Launcher -->
-        <a href="NukeLauncher.apk" download class="btn-download">Descargar APK</a>
-
+        <a href="NukeLauncher.apk" download class="btn-download btn-nuke">Descargar APK</a>
         <div class="description">
-            <h3>Acerca de este juego</h3>
+            <h3>Acerca de esta app</h3>
             <p>Sistema táctico de lanzamiento múltiple desarrollado con flujos de Intents y variables en Sketchware Pro.</p>
         </div>
+    </div>
+
+    <!-- 3. Free Robux -->
+    <div class="card">
+        <div class="app-header">
+            <div class="app-icon">💎</div>
+            <div class="app-info">
+                <h2>Free Robux</h2>
+                <p>Servios Studio • Herramienta</p>
+            </div>
+        </div>
+        <div class="specs">
+            <div class="spec-item"><span>v1.0</span><span>Versión</span></div>
+            <div class="spec-item"><span>~2 MB</span><span>Tamaño</span></div>
+            <div class="spec-item"><span>Android</span><span>Plataforma</span></div>
+        </div>
+        <a href="Freerobux.apk" download class="btn-download btn-robux">Descargar APK</a>
+        <div class="description">
+            <h3>Acerca de esta app</h3>
+            <p>Generador y utilidad ligera para conseguir recursos y diversión en tus experiencias favoritas de Roblox.</p>
+        </div>
+    </div>
+
+    <!-- 4. Delta Executor -->
+    <div class="card">
+        <div class="app-header">
+            <div class="app-icon">⚡</div>
+            <div class="app-info">
+                <h2>Delta Executor</h2>
+                <p>Servios Studio • Utilidad</p>
+            </div>
+        </div>
+        <div class="specs">
+            <div class="spec-item"><span>v1.0</span><span>Versión</span></div>
+            <div class="spec-item"><span>~5 MB</span><span>Tamaño</span></div>
+            <div class="spec-item"><span>Android</span><span>Plataforma</span></div>
+        </div>
+        <a href="deltaexecutor.apk" download class="btn-download btn-delta">Descargar APK</a>
+        <div class="description">
+            <h3>Acerca de esta app</h3>
+            <p>Ejecutor de scripts y herramientas avanzadas para pruebas de rendimiento y desarrollo en móvil.</p>
+        </div>
+    </div>
+
+    <!-- 5. Virus App -->
+    <div class="card">
+        <div class="app-header">
+            <div class="app-icon">⚠️</div>
+            <div class="app-info">
+                <h2>Virus Prank</h2>
+                <p>Servios Studio • Entretenimiento</p>
+            </div>
+        </div>
+        <div class="specs">
+            <div class="spec-item"><span>v1.0</span><span>Versión</span></div>
+            <div class="spec-item"><span>~2 MB</span><span>Tamaño</span></div>
+            <div class="spec-item"><span>Android</span><span>Plataforma</span></div>
+        </div>
+        <a href="virus.apk" download class="btn-download btn-virus">Descargar APK</a>
+        <div class="description">
+            <h3>Acerca de esta app</h3>
+            <p>Aplicación de broma y efectos visuales extremos para gastar un susto inolvidable a tus amigos.</p>
+        </div>
         <div class="note">
-            <strong>Nota de instalación:</strong> Archivo APK firmado para dispositivos Android. Permite fuentes desconocidas para instalar.
+            <strong>Advertencia:</strong> Aplicación de puro entretenimiento y bromas entre amigos. ¡Úsala con precaución!
         </div>
     </div>
 
 </body>
-            </html>
-            
+                </html>
+                                       
